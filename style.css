@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+}
+
+/* ----------Header----------- */
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/header-image.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    background-color: #db0001;
+    color: #fff;
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.languague-btn{
+    display: inline-flex;
+    background: transparent;
+    border: 0.5px solid grey;
+    padding: 7px 14px;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+.languague-btn img{
+    width: 10px;
+    margin-left: 15px;
+}
+
+.header-content{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.header-content h1{
+    font-size: 60px;
+    font-weight: 600;
+    max-width: 650;
+    line-height: 70px;
+    margin-bottom: 25px;
+}
+
+.header-content h3{
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.account-signup{
+    display: flex;
+    gap: 10px;
+    width: 70%;
+    margin-top: 20px;
+}
+.account-signup input{
+    flex: 1;
+    gap: 1;
+    border-radius: 4px;
+    padding-left: 20px;
+    background: transparent;
+    border: 1px solid grey;
+    color: #fff;
+    font-size: 20px;
+}
+.account-signup input:focus{
+    background-color: transparent;
+}
+.account-signup button{
+    padding: 15px 30px;
+    border-radius: 4px;
+    background: #db0001;
+    color: #fff;
+    font-size: 25px;    
+    font-weight: 600;
+    cursor: pointer;
+}
+.account-signup input:focus ~ label{
+    transform: translateY(-23px);
+    font-size: 12px;
+}
+.account-signup label{
+    position: absolute;
+    bottom: 20px;
+    margin: auto 22px;
+    font-size: 20px;
+    color: rgb(186, 185, 185);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* ---------Features----------- */
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0%;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.text-col h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 60px;
+}
+
+/* --------------faq--------------- */
+
+.faq{
+    padding: 15px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.accordion{
+    list-style: none;
+    margin: 60px auto;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 25px;
+}
+.accordion li{
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+.accordion li label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.2s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background-color: #303030;
+    padding: 0 20px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion label:hover{
+    background-color: #5d5c5c;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .account-signup{
+    margin: 20px auto 60px;
+    max-width: 600px;
+}
+.faq button{
+    font-size: 20px;
+}
+.faq small{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+/* -------------footer-------------- */
+footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #bbb7b7;
+}
+
+footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+footer .col a{
+    display: block;
+    color: #bbb7b7;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+footer .row{
+    align-items: flex-start;
+    padding: 15px 0;
+}
+footer .copyright-txt{
+    text-decoration: none;
+    font-size: 15px;
+    margin: 30px auto 70px;
+}
+
+/* ---------media-queries-for-small-screen---------- */
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 100px;
+    }
+    nav button{
+        padding: 5px 10px;
+    }
+    nav .languague-btn{
+        padding: 4px 8px;
+    }
+
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h1{
+        font-size: 30px;
+    }
+    .account-signup button{
+        font-size: 20px;
+        padding: 12px 20px;
+        margin-top: 15px;
+    }
+    .account-signup{
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+    .account-signup input{
+        padding: 10px 20px 10px;
+    }
+    .account-signup label{
+        transform: translate(-300px,53px);
+        width: 130px;
+    }
+    .account-signup input:focus ~ label{
+        color: black;
+        transition: none;
+    }
+
+    .text-col, .img-col{
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+    .features .row:nth-child(2), .features .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .features .row{
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .faq h2{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .accordion .content{
+        font-size: 14px;
+    }
+    .accordion li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+    label::after{
+        font-size: 22px;
+    }
+
+    footer .row{
+        display: block;
+    }
+}
